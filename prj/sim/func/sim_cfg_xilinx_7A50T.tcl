@@ -1,8 +1,8 @@
 #-------------------------------------------------------------------------------
-#	Project:       Any
-#	Platform:      xilinx_7A50T
+#       Project:       Any
+#       Platform:      xilinx_7A50T
 #
-#	description:   md5 start-up
+#       description:   slon5 start-up
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
@@ -18,16 +18,16 @@ set WorkLib        "wlib"
 
 #-------------------------------------------------------------------------------
 set Src  [ list                                   \
-	       "${REF_DIR}/prj/src"                   \
-	       "${REF_DIR}/prj/src/slon"              \
-	       "${REF_DIR}/prj/src/slon/slonick"      \
-	     ]
+               "${REF_DIR}/prj/src"                   \
+               "${REF_DIR}/prj/src/slon"              \
+               "${REF_DIR}/prj/src/slon/slonick"      \
+             ]
 set Lib  [ list                                   \
-	       "${REF_DIR}/lib"                       \
-	     ]
+               "${REF_DIR}/lib"                       \
+             ]
 set Sim  [ list                                   \
-	       "${REF_DIR}/prj/sim/func/src"          \
-	     ]
+               "${REF_DIR}/prj/sim/func/src"          \
+             ]
 
 #-------------------------------------------------------------------------------
 source ${SCRIPT_DIR}/questa_sim.tcl

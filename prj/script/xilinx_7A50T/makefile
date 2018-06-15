@@ -1,8 +1,8 @@
 #-------------------------------------------------------------------------------
-#	project:       md5_test
+#	project:       slon5_test
 #	cfg:           xilinx_7A50T
 #
-#	description:   md5 start-up
+#	description:   slon5 start-up
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
@@ -10,16 +10,16 @@
 #-------------------------------------------------------------------------------
 
 DEVICE   := xc7a50tftg256-1
-PRJ_NAME := md5_test
+TOP_NAME := slon5_test
 REF_DIR  := ../../..
 SRC_DIR  := ../../src
 SYN_DIR  := ..
 
 #-------------------------------------------------------------------------------
-INC := $(SRC_DIR)/md5.svh
+INC := $(SRC_DIR)/slon5.svh
 
-SRC := $(SRC_DIR)/md5_test.sv      \
-       $(SRC_DIR)/md5.sv           \
+SRC := $(SRC_DIR)/slon5_test.sv      \
+       $(SRC_DIR)/slon5.sv           \
        $(SRC_DIR)/slon01.v         \
        $(SRC_DIR)/slon/slon11.v    \
        $(SRC_DIR)/slon/slon12.sv   \
@@ -27,8 +27,8 @@ SRC := $(SRC_DIR)/md5_test.sv      \
        
 #LIB := pf.sv
 
-SDC := md5_test-xilinx_7A50T.sdc \
-       md5_test-xilinx_7A50T.xdc
+SDC := slon5_test-xilinx_7A50T.sdc \
+       slon5_test-xilinx_7A50T.xdc
 
 #CFG_IP := ram_16x8 fifo_1024x8 fifo_512x8 fifo_256x8 pll
 

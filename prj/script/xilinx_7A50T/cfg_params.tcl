@@ -1,8 +1,8 @@
 #-------------------------------------------------------------------------------
-#	project:       md5_test
-#	cfg:           xilinx_7A50T
+#       project:       slon5_test
+#       cfg:           xilinx_7A50T
 #
-#	description:   md5 start-up
+#       description:   slon5 start-up
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
@@ -25,11 +25,11 @@ puts $prjDefFile [format "`define DNUM_POLARITY %s" $DNUM_POLARITY];
 
 #-------------------------------------------------------------------------------
 if {$USE_PLL == 1} {
-	puts $prjDefFile [format "`define USE_PLL"];
+        puts $prjDefFile [format "`define USE_PLL"];
 }
 
 if {$USE_MEM_IP_CORES == 1} {
-	puts $prjDefFile [format "`define USE_MEM_IP_CORES"];
+        puts $prjDefFile [format "`define USE_MEM_IP_CORES"];
 }
 
 
