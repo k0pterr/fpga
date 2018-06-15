@@ -73,7 +73,26 @@
                 Name="src"
                 AutoCustom="1"
                 GUID="{879470FE-CA51-45C6-A2B7-1DD1EBCCDB41}">
+                <Folder
+                    Name="slon"
+                    AutoCustom="1"
+                    GUID="{8771C3DD-E604-4B62-B60D-49B121EE51AA}">
+                    <Folder
+                        Name="slonick"
+                        AutoCustom="1"
+                        GUID="{389C9E4F-CA5B-4C01-A3D1-8CBF045FCD8A}">
+                        <F N="prj/src/slon/slonick/slon21.v"/>
+                    </Folder>
+                    <F N="prj/src/slon/slon11.v"/>
+                    <F N="prj/src/slon/slon12.sv"/>
+                </Folder>
                 <F N="prj/src/top.sv"/>
+                <F N="prj/src/md5.svh"/>
+                <F N="prj/src/md5_generated.svh"/>
+                <F N="prj/src/md5.tcl"/>
+                <F N="prj/src/slon01.v"/>
+                <F N="prj/src/md5_test.sv"/>
+                <F N="prj/src/md5.sv"/>
             </Folder>
             <Folder
                 Name="sim"
