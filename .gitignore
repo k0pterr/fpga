@@ -19,5 +19,6 @@ webtalk.*
 transcript
 *.fv
 modelsim.ini
-
+*.vpwhistu
+*.vtg
 
