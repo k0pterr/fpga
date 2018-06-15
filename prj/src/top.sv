@@ -9,8 +9,8 @@
 
 module top
 (
-    input  in;
-    output out;
+    input  in,
+    output out
 );
 
 assign out = in;
