@@ -9,11 +9,13 @@
 # REF_DIR    - top level dir (attention please!)
 #-------------------------------------------------------------------------------
 
-DEVICE   := xc7a35ticsg324-1L
-PRJ_NAME := md5_test
-REF_DIR  := ../../..
-SRC_DIR  := ../../src
-SYN_DIR  := ..
+DEVICE     := xc7a35ticsg324-1L
+PRJ_NAME   := md5_test
+REF_DIR    := ../../..
+SRC_DIR    := ../../src
+BUILD_DIR  := ../../../build
+
+SIM_DIR    := $(BUILD_DIR)/sim
 
 #-------------------------------------------------------------------------------
 INC := $(SRC_DIR)/md5.svh
@@ -24,6 +26,8 @@ SRC := $(SRC_DIR)/md5_test.sv      \
        $(SRC_DIR)/slon/slon11.v    \
        $(SRC_DIR)/slon/slon12.sv   \
        $(SRC_DIR)/slon/slonick/slon21.v
+       
+SRC_SIM := $SRC 
        
 #LIB := pf.sv
 
