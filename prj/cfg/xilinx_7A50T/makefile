@@ -40,6 +40,5 @@ TRG_BOARD  := "Digilent/210251991273"
 TRG_DEVICE := "xc7a50t_0"
 
 #-------------------------------------------------------------------------------
-BUILD_TOOL := VIVADO
 
 include $(REF_DIR)/script/xilinx.mk

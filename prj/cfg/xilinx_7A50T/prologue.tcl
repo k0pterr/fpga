@@ -25,7 +25,6 @@ if {$prologue_debug == 1} {
         puts "SCRIPT_DIR:       $SCRIPT_DIR"
         puts "SRC_DIR:          $SRC_DIR"
         puts "TOP_NAME:         $TOP_NAME"
-        puts "BUILD_TOOL:       $BUILD_TOOL"
         
         if {[info exists env(XILINX)]} {
                 puts ""
