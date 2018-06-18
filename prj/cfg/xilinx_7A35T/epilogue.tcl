@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------------
-#	Project:       Any
-#	Platform:      xilinx_7A35T
+#	Project:         Any
+#	Configuration:   xilinx_7A35T
 #
 #	Description:   Epilogue config script
 #--------------------------------------------------------------------------------
