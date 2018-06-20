@@ -4,83 +4,38 @@
     VendorName="SlickEdit"
     WorkingDir=".">
     <Config
-        Name="Release"
-        OutputFile=""
-        CompilerConfigName="Latest Version">
-        <Menu>
-            <Target
-                Name="Build"
-                CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveAll"
-                RunFromDir="%rw/build/sim/func"
-                ClearProcessBuffer="1"
-                MenuCaption="&amp;Compile Project"
-                Verbose="1">
-                <Exec CmdLine="python build.py -c"/>
-            </Target>
-            <Target
-                Name="Compile"
-                MenuCaption="Compile  file"
-                CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveAll"
-                ClearProcessBuffer="1">
-                <Exec CmdLine=""/>
-            </Target>
-            <Target
-                Name="Rebuild"
-                MenuCaption="&amp;Rebuild"
-                CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw">
-                <Exec/>
-            </Target>
-            <Target
-                Name="Debug"
-                MenuCaption="&amp;Debug"
-                SaveOption="SaveNone"
-                RunFromDir="%rw/sim/func"
-                RunInXterm="1">
-                <Exec CmdLine="/opt/cad/mentor/questa.sh -do qs.tcl"/>
-            </Target>
-            <Target
-                Name="Execute"
-                MenuCaption="E&amp;xecute"
-                SaveOption="SaveNone"
-                RunFromDir="%rw">
-                <Exec CmdLine='"C2.exe"'/>
-            </Target>
-        </Menu>
-    </Config>
-    <Config
         Name="xilinx_A750T"
         OutputFile=""
         CompilerConfigName="Latest Version">
         <Menu>
+            <Target
+                Name="Compile"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                MenuCaption="Compile Simulator Project">
+                <Exec CmdLine="make qs_vlog"/>
+            </Target>
             <Target
                 Name="Build"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
                 RunFromDir="%rw/prj/cfg/xilinx_7A50T"
                 ClearProcessBuffer="1"
-                MenuCaption="&amp;Compile Project"
+                MenuCaption="&amp;Build Vivado Project"
                 Verbose="1">
-                <Exec CmdLine="make qs_vlog"/>
-            </Target>
-            <Target
-                Name="Compile"
-                MenuCaption="Compile  file"
-                CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveAll"
-                ClearProcessBuffer="1">
-                <Exec CmdLine=""/>
+                <Exec CmdLine="make"/>
             </Target>
             <Target
                 Name="Rebuild"
                 MenuCaption="&amp;Rebuild"
                 CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw">
-                <Exec/>
+                SaveOption="SaveAll"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                ClearProcessBuffer="1"
+                Verbose="1">
+                <Exec CmdLine="make clean all"/>
             </Target>
             <Target
                 Name="Debug"
@@ -92,10 +47,12 @@
             </Target>
             <Target
                 Name="Execute"
-                MenuCaption="E&amp;xecute"
-                SaveOption="SaveNone"
-                RunFromDir="%rw">
-                <Exec CmdLine='"C2.exe"'/>
+                MenuCaption="Program Device"
+                SaveOption="SaveAll"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1">
+                <Exec CmdLine="make dev_pgm"/>
             </Target>
         </Menu>
     </Config>
