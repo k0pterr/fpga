@@ -12,11 +12,59 @@
                 Name="Build"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
-                RunFromDir="%rw/sim/func"
+                RunFromDir="%rw/build/sim/func"
                 ClearProcessBuffer="1"
                 MenuCaption="&amp;Compile Project"
                 Verbose="1">
                 <Exec CmdLine="python build.py -c"/>
+            </Target>
+            <Target
+                Name="Compile"
+                MenuCaption="Compile  file"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1">
+                <Exec CmdLine=""/>
+            </Target>
+            <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                SaveOption="SaveNone"
+                RunFromDir="%rw/sim/func"
+                RunInXterm="1">
+                <Exec CmdLine="/opt/cad/mentor/questa.sh -do qs.tcl"/>
+            </Target>
+            <Target
+                Name="Execute"
+                MenuCaption="E&amp;xecute"
+                SaveOption="SaveNone"
+                RunFromDir="%rw">
+                <Exec CmdLine='"C2.exe"'/>
+            </Target>
+        </Menu>
+    </Config>
+    <Config
+        Name="xilinx_A750T"
+        OutputFile=""
+        CompilerConfigName="Latest Version">
+        <Menu>
+            <Target
+                Name="Build"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                ClearProcessBuffer="1"
+                MenuCaption="&amp;Compile Project"
+                Verbose="1">
+                <Exec CmdLine="make qs_vlog"/>
             </Target>
             <Target
                 Name="Compile"
@@ -86,35 +134,26 @@
                     <F N="prj/src/slon/slon11.v"/>
                     <F N="prj/src/slon/slon12.sv"/>
                 </Folder>
-                <F N="prj/src/top.sv"/>
-                <F N="prj/src/md5.svh"/>
-                <F N="prj/src/md5_generated.svh"/>
-                <F N="prj/src/md5.tcl"/>
-                <F N="prj/src/slon01.v"/>
-                <F N="prj/src/md5_test.sv"/>
-                <F N="prj/src/md5.sv"/>
-            </Folder>
-            <Folder
-                Name="sim"
-                AutoCustom="1"
-                GUID="{4C9B2868-EBFD-4F87-8427-A33AE1657881}">
                 <Folder
-                    Name="func"
+                    Name="sim"
                     AutoCustom="1"
-                    GUID="{4FC61700-A531-4956-922F-D37F388BB2A0}">
+                    GUID="{A5E8E778-1113-4877-8AC6-49926BD6CB0A}">
                     <Folder
-                        Name="src"
+                        Name="func"
                         AutoCustom="1"
-                        GUID="{E8C7D1B9-D87B-44D7-B791-30BBEEAE6D28}">
-                        <F N="prj/sim/func/src/top_tb.sv"/>
+                        GUID="{9004391D-9051-4763-941E-4D878639A589}">
+                        <F N="prj/src/sim/func/slon5_debug.svh"/>
+                        <F N="prj/src/sim/func/top_tb.sv"/>
+                        <F N="prj/src/sim/func/slon5_tb.sv"/>
                     </Folder>
-                    <F N="prj/sim/func/clear_sim.sh"/>
-                    <F N="prj/sim/func/sim_cfg_xilinx_7A50T.tcl"/>
-                    <F N="prj/sim/func/modelsim.ini"/>
-                    <F N="prj/sim/func/sim_cfg_xilinx_7A35T.tcl"/>
-                    <F N="prj/sim/func/top_wave.do"/>
-                    <F N="prj/sim/func/compile_xilinx_7A35T.tcl"/>
                 </Folder>
+                <F N="prj/src/top.sv"/>
+                <F N="prj/src/slon5.svh"/>
+                <F N="prj/src/slon5_generated.svh"/>
+                <F N="prj/src/slon5.tcl"/>
+                <F N="prj/src/slon01.v"/>
+                <F N="prj/src/slon5_test.sv"/>
+                <F N="prj/src/slon5.sv"/>
             </Folder>
             <Folder
                 Name="cfg"
@@ -125,9 +164,9 @@
                     Name="xilinx_7A35T"
                     AutoCustom="1"
                     GUID="{9E40A52D-A336-40DE-874E-786D968BCC4A}">
-                    <F N="prj/cfg/xilinx_7A35T/md5_test-xilinx_7A35T.sdc"/>
+                    <F N="prj/cfg/xilinx_7A35T/slon5_test-xilinx_7A35T.sdc"/>
                     <F N="prj/cfg/xilinx_7A35T/makefile"/>
-                    <F N="prj/cfg/xilinx_7A35T/md5_test-xilinx_7A35T.xdc"/>
+                    <F N="prj/cfg/xilinx_7A35T/slon5_test-xilinx_7A35T.xdc"/>
                     <F N="prj/cfg/xilinx_7A35T/prologue.tcl"/>
                     <F N="prj/cfg/xilinx_7A35T/settings.tcl"/>
                     <F N="prj/cfg/xilinx_7A35T/cfg_params.tcl"/>
@@ -140,9 +179,9 @@
                     GUID="{FCF2DE9A-53D0-497A-9613-2220DB20859D}">
                     <F N="prj/cfg/xilinx_7A50T/makefile"/>
                     <F N="prj/cfg/xilinx_7A50T/prologue.tcl"/>
-                    <F N="prj/cfg/xilinx_7A50T/md5_test-xilinx_7A50T.sdc"/>
+                    <F N="prj/cfg/xilinx_7A50T/slon5_test-xilinx_7A50T.sdc"/>
                     <F N="prj/cfg/xilinx_7A50T/settings.tcl"/>
-                    <F N="prj/cfg/xilinx_7A50T/md5_test-xilinx_7A50T.xdc"/>
+                    <F N="prj/cfg/xilinx_7A50T/slon5_test-xilinx_7A50T.xdc"/>
                     <F N="prj/cfg/xilinx_7A50T/cfg_params.tcl"/>
                     <F N="prj/cfg/xilinx_7A50T/epilogue.tcl"/>
                     <F N="prj/cfg/xilinx_7A50T/cfg_params_generated.svh"/>

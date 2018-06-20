@@ -12,9 +12,9 @@ puts "========================================================================="
 
 set srcDir [lindex $SRC_DIR 0]
 #-----------------------------------
-#source ${srcDir}/slon5.tcl
-#slon5_gen ${srcDir}  "slon5_test" "slon5_generated" "slon5 alg"
-#puts "slon5_generated.pkg created"
+source ${srcDir}/slon5.tcl
+slon5_gen ${srcDir}  "slon5_test" "slon5_generated" "slon5 alg"
+puts "slon5_generated.pkg created"
 
 #-----------------------------------
 set prologue_debug 1

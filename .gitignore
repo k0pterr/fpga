@@ -9,7 +9,7 @@ prj/sim/func/wlib
 # Files #
 ################################################################################
 cfg_params_generated.svh
-md5_generated.svh
+slon5_generated.svh
 webtalk.*
 *.log
 *.jou
