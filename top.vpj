@@ -1,0 +1,231 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+    Version="10.0"
+    VendorName="SlickEdit"
+    WorkingDir=".">
+    <Config
+        Name="xilinx_7A50T"
+        OutputFile=""
+        CompilerConfigName="Latest Version">
+        <Menu>
+            <Target
+                Name="Compile"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                MenuCaption="Compile Simulator Project">
+                <Exec CmdLine="make qs_vlog"/>
+            </Target>
+            <Target
+                Name="Build"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                ClearProcessBuffer="1"
+                MenuCaption="&amp;Build Vivado Project"
+                Verbose="1">
+                <Exec CmdLine="make"/>
+            </Target>
+            <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                ClearProcessBuffer="1"
+                Verbose="1">
+                <Exec CmdLine="make clean all"/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                SaveOption="SaveNone"
+                RunInXterm="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T">
+                <Exec CmdLine="make qs_gui"/>
+            </Target>
+            <Target
+                Name="Execute"
+                MenuCaption="Program Device"
+                SaveOption="SaveAll"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1">
+                <Exec CmdLine="make dev_pgm"/>
+            </Target>
+        </Menu>
+    </Config>
+    <Config
+        Name="xilinx_7A35T"
+        OutputFile=""
+        CompilerConfigName="Latest Version">
+        <Menu>
+            <Target
+                Name="Compile"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A35T"
+                MenuCaption="Compile Simulator Project">
+                <Exec CmdLine="make qs_vlog"/>
+            </Target>
+            <Target
+                Name="Build"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                MenuCaption="&amp;Build Vivado Project"
+                Verbose="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                <Exec CmdLine="make"/>
+            </Target>
+            <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                <Exec CmdLine="make clean all"/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                SaveOption="SaveNone"
+                RunInXterm="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                <Exec CmdLine="make qs_gui"/>
+            </Target>
+            <Target
+                Name="Execute"
+                MenuCaption="Program Device"
+                SaveOption="SaveAll"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                <Exec CmdLine="make dev_pgm"/>
+            </Target>
+        </Menu>
+    </Config>
+    <Files>
+        <Folder
+            Name="ip"
+            AutoCustom="1"
+            GUID="{FB000EC4-8834-45ED-B6E9-648E46678DE2}">
+            <Folder
+                Name="xilinx"
+                AutoCustom="1"
+                GUID="{59EEA8E9-A8AF-4AE3-BD3D-83D800943353}">
+                <F N="ip/xilinx/pll.tcl"/>
+                <F N="ip/xilinx/ram_sc_sp.tcl"/>
+                <F N="ip/xilinx/fifo_sc.tcl"/>
+            </Folder>
+        </Folder>
+        <Folder
+            Name="prj"
+            AutoCustom="1"
+            GUID="{4B3F21F9-7D66-4C42-B032-F379DCDEC419}">
+            <Folder
+                Name="src"
+                AutoCustom="1"
+                GUID="{879470FE-CA51-45C6-A2B7-1DD1EBCCDB41}">
+                <Folder
+                    Name="slon"
+                    AutoCustom="1"
+                    GUID="{8771C3DD-E604-4B62-B60D-49B121EE51AA}">
+                    <Folder
+                        Name="slonick"
+                        AutoCustom="1"
+                        GUID="{389C9E4F-CA5B-4C01-A3D1-8CBF045FCD8A}">
+                        <F N="prj/src/slon/slonick/slon21.v"/>
+                    </Folder>
+                    <F N="prj/src/slon/slon11.v"/>
+                    <F N="prj/src/slon/slon12.sv"/>
+                </Folder>
+                <Folder
+                    Name="sim"
+                    AutoCustom="1"
+                    GUID="{A5E8E778-1113-4877-8AC6-49926BD6CB0A}">
+                    <Folder
+                        Name="func"
+                        AutoCustom="1"
+                        GUID="{9004391D-9051-4763-941E-4D878639A589}">
+                        <F N="prj/src/sim/func/slon5_debug.svh"/>
+                        <F N="prj/src/sim/func/top_tb.sv"/>
+                        <F N="prj/src/sim/func/slon5_tb.sv"/>
+                    </Folder>
+                </Folder>
+                <F N="prj/src/top.sv"/>
+                <F N="prj/src/slon5.svh"/>
+                <F N="prj/src/slon5_generated.svh"/>
+                <F N="prj/src/slon5.tcl"/>
+                <F N="prj/src/slon01.v"/>
+                <F N="prj/src/slon5_test.sv"/>
+                <F N="prj/src/slon5.sv"/>
+            </Folder>
+            <Folder
+                Name="cfg"
+                AutoCustom="1"
+                GUID="{DC420C3F-9189-4900-87A0-A98A74317F39}"
+                Filters="">
+                <Folder
+                    Name="xilinx_7A35T"
+                    AutoCustom="1"
+                    GUID="{9E40A52D-A336-40DE-874E-786D968BCC4A}">
+                    <F N="prj/cfg/xilinx_7A35T/slon5_test-xilinx_7A35T.sdc"/>
+                    <F N="prj/cfg/xilinx_7A35T/makefile"/>
+                    <F N="prj/cfg/xilinx_7A35T/slon5_test-xilinx_7A35T.xdc"/>
+                    <F N="prj/cfg/xilinx_7A35T/prologue.tcl"/>
+                    <F N="prj/cfg/xilinx_7A35T/settings.tcl"/>
+                    <F N="prj/cfg/xilinx_7A35T/cfg_params.tcl"/>
+                    <F N="prj/cfg/xilinx_7A35T/epilogue.tcl"/>
+                    <F N="prj/cfg/xilinx_7A35T/cfg_params_generated.svh"/>
+                </Folder>
+                <Folder
+                    Name="xilinx_7A50T"
+                    AutoCustom="1"
+                    GUID="{FCF2DE9A-53D0-497A-9613-2220DB20859D}">
+                    <F N="prj/cfg/xilinx_7A50T/makefile"/>
+                    <F N="prj/cfg/xilinx_7A50T/prologue.tcl"/>
+                    <F N="prj/cfg/xilinx_7A50T/slon5_test-xilinx_7A50T.sdc"/>
+                    <F N="prj/cfg/xilinx_7A50T/settings.tcl"/>
+                    <F N="prj/cfg/xilinx_7A50T/slon5_test-xilinx_7A50T.xdc"/>
+                    <F N="prj/cfg/xilinx_7A50T/cfg_params.tcl"/>
+                    <F N="prj/cfg/xilinx_7A50T/epilogue.tcl"/>
+                    <F N="prj/cfg/xilinx_7A50T/cfg_params_generated.svh"/>
+                </Folder>
+            </Folder>
+        </Folder>
+        <Folder
+            Name="lib"
+            AutoCustom="1"
+            GUID="{45D57B71-C64F-42F8-AD9F-41109340E096}">
+            <F N="lib/common.pkg"/>
+            <F N="lib/pf.sv"/>
+        </Folder>
+        <Folder
+            Name="script"
+            AutoCustom="1"
+            GUID="{31331766-9DED-4E0F-ABBE-92685BA0190E}">
+            <Folder
+                Name="helpers"
+                AutoCustom="1"
+                GUID="{94AA4203-5A69-4988-8DC3-6657408284A9}">
+                <F N="script/helpers/qs_gui.tcl"/>
+                <F N="script/helpers/qs_env.tcl"/>
+            </Folder>
+            <F N="script/altera.mk"/>
+            <F N="script/xilinx.mk"/>
+            <F N="script/xilinx_prj_gen.tcl"/>
+            <F N="script/xilinx_prj_build.tcl"/>
+            <F N="script/altera_prj_gen.tcl"/>
+            <F N="script/xilinx_dev_pgm.tcl"/>
+            <F N="script/cfg_header_gen.tcl"/>
+            <F N="script/questa_sim.tcl"/>
+            <F N="script/xilinx_ip_bld.tcl"/>
+            <F N="script/altera_prj_build.tcl"/>
+        </Folder>
+    </Files>
+</Project>

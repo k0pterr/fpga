@@ -21,7 +21,7 @@ initial begin
     end
 
     #100ns
-    $stop()
+    $stop();
 end
 
 top top_inst
