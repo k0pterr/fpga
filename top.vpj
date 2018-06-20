@@ -86,9 +86,9 @@
                 Name="Debug"
                 MenuCaption="&amp;Debug"
                 SaveOption="SaveNone"
-                RunFromDir="%rw/sim/func"
-                RunInXterm="1">
-                <Exec CmdLine="/opt/cad/mentor/questa.sh -do qs.tcl"/>
+                RunInXterm="1"
+                RunFromDir="%rw/prj/cfg/xilinx_7A50T">
+                <Exec CmdLine="make qs_gui"/>
             </Target>
             <Target
                 Name="Execute"
