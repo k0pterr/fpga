@@ -21,8 +21,6 @@ BUILD_DIR     := ../../../build
 
 SIM_WLIB_NAME := wlib
 
-SIM_INC_DIRS  := $(CFG_DIR) $(SRC_DIR) $(INC_DIR)
-
 #-------------------------------------------------------------------------------
 #
 #    Synthesis
@@ -69,6 +67,9 @@ TRG_DEVICE := "xc7a50t_0"
 SRC_SIM := $(SRC)\
            $(SRC_DIR)/sim/func/top_tb.sv\
            $(SRC_DIR)/sim/func/slon5_tb.sv
+
+
+SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(INC_DIR)
 
 #-----------------------------------------------------------
 #
