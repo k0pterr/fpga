@@ -9,14 +9,15 @@
 # REF_DIR    - top level dir (attention please!)
 #-------------------------------------------------------------------------------
 
-DEVICE     := xc7a35ticsg324-1L
+DEVICE        := xc7a35ticsg324-1L
 TOP_NAME      := slon5_test
 TBENCH_NAME   := slon5_tb
 
 REF_DIR       := ../../..
+LIB_DIR       := $(REF_DIR)/lib
 CFG_DIR       := $(CURDIR)
 SRC_DIR       := ../../src
-INC_DIR       := $(REF_DIR)/lib
+INC_DIR       := $(LIB_DIR)
 BUILD_DIR     := ../../../build
 
 SIM_WLIB_NAME := wlib
@@ -29,6 +30,8 @@ SIM_WLIB_NAME := wlib
 #
 #    Sources
 #
+LIB := $(LIB_DIR)/pf.sv
+
 INC := $(SRC_DIR)/slon5.svh
 
 SRC := $(SRC_DIR)/slon5_test.sv    \
@@ -36,9 +39,9 @@ SRC := $(SRC_DIR)/slon5_test.sv    \
        $(SRC_DIR)/slon01.v         \
        $(SRC_DIR)/slon/slon11.v    \
        $(SRC_DIR)/slon/slon12.sv   \
-       $(SRC_DIR)/slon/slonick/slon21.v
+       $(SRC_DIR)/slon/slonick/slon21.v\
+	$(LIB)
 
-#LIB := pf.sv
 
 #-----------------------------------------------------------
 #
@@ -48,6 +51,7 @@ SDC := xilinx_7A35T.sdc \
        xilinx_7A35T.xdc
 
 #CFG_IP := ram_16x8 fifo_1024x8 fifo_512x8 fifo_256x8 pll
+CFG_IP := ip/pll
 
 #-----------------------------------------------------------
 #

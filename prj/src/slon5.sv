@@ -14,6 +14,7 @@
 module slon5_m import slon5_pkg::*, slon5_generated_pkg::*;
 (
     input  logic  clk,
+    input  logic  rst,
                                  
     input  Dnum_t sw,
 
@@ -24,6 +25,8 @@ module slon5_m import slon5_pkg::*, slon5_generated_pkg::*;
 //==============================================================================
 //    Settings
 //==============================================================================
+
+localparam PRESCALER_W = clog2(50_000_000);
 
 //==============================================================================
 //    Types
@@ -57,6 +60,8 @@ endfunction
 
 StageIdx_t idx; 
 
+logic [PRESCALER_W-1:0] prescaler;
+
 //==============================================================================
 //     Logic
 //==============================================================================
@@ -71,9 +76,18 @@ initial begin
 end
 
 always_comb begin
-    dnum = dnumOut(sw, `DNUM_POLARITY);
+    //dnum = dnumOut(sw, `DNUM_POLARITY);
     idx  = { '0, sw };
     dout = getTableElem(idx, `TABLE_ID);
+    
+    dnum = prescaler[PRESCALER_W - 1:PRESCALER_W-1-`DNUM_WIDTH];
+end
+
+always_ff @(posedge clk) begin
+    if(rst) begin
+        prescaler <= 0; 
+    end
+    prescaler <= prescaler + 1;
 end
 
 //==============================================================================
