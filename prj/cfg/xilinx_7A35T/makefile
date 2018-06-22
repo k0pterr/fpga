@@ -30,8 +30,6 @@ SIM_WLIB_NAME := wlib
 #
 #    Sources
 #
-LIB := $(LIB_DIR)/pf.sv
-
 INC := $(SRC_DIR)/slon5.svh
 
 SRC := $(SRC_DIR)/slon5_test.sv    \
@@ -40,7 +38,7 @@ SRC := $(SRC_DIR)/slon5_test.sv    \
        $(SRC_DIR)/slon/slon11.v    \
        $(SRC_DIR)/slon/slon12.sv   \
        $(SRC_DIR)/slon/slonick/slon21.v\
-	$(LIB)
+       $(LIB_DIR)/pf.sv
 
 
 #-----------------------------------------------------------
