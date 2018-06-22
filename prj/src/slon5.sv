@@ -87,12 +87,16 @@ always_ff @(posedge clk) begin
     if(rst) begin
         prescaler <= 0; 
     end
-    prescaler <= prescaler + 1;
+    else begin
+        prescaler <= prescaler + 1;
+    end
 end
 
 //==============================================================================
 //    Instances
 //==============================================================================
+
+
 
 endmodule : slon5_m
 
