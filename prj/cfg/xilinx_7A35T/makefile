@@ -68,8 +68,10 @@ TRG_DEVICE := "xc7a35t_0"
 #
 SRC_SIM := $(SRC)\
            $(SRC_DIR)/sim/func/top_tb.sv\
-           $(SRC_DIR)/sim/func/slon5_tb.sv
-
+           $(SRC_DIR)/sim/func/slon5_tb.sv\
+	       /opt/slon/xilinx/mike/xilinx-vivado-bullet/build/syn/xilinx_7A35T/.ip/pll/pll/pll.v\
+	       /opt/slon/xilinx/mike/xilinx-vivado-bullet/build/syn/xilinx_7A35T/.ip/pll/pll/pll_clk_wiz.v\
+	    
 
 SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(INC_DIR)
 
@@ -78,7 +80,7 @@ SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(INC_DIR)
 #    Options
 #
 VLOG_FLAGS := -O5
-VOPT_FLAGS := -O5
+VOPT_FLAGS := -O5 -L unisims_ver
 
 #-------------------------------------------------------------------------------
 

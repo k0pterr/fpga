@@ -34,6 +34,8 @@ module slon5_test import slon5_pkg::*;
 logic clk;
 logic rst;
 
+logic pll_locked;
+
 //==============================================================================
 //     Logic
 //==============================================================================
@@ -54,15 +56,16 @@ rst_m rst_inst
 //------------------------------------------------------------------------------
 //    pll
 //------------------------------------------------------------------------------
+pll pll_inst
+(
+    .clk_in1  ( ref_clk    ),
+    .clk_out1 ( clk        ),
+    .locked   ( pll_locked )
+);
 `ifndef SIMULATOR
     //---- PLL instance
-    pll pll_inst
-    (
-        .clk_in1  ( ref_clk ),
-        .clk_out1 ( clk     )
-    );
 `else
-    assign clk = ref_clk;
+//    assign clk = ref_clk;
 `endif
 
 

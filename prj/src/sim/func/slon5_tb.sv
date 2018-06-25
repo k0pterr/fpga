@@ -23,7 +23,7 @@ module slon5_tb import slon5_pkg::*,
                                
 //------------------------------------------------------------------------------
 `define CLK_HALF_PERIOD     5ns
-`define WATCH_DOG_TIME   1000ns
+`define WATCH_DOG_TIME   10000ns
 
 //------------------------------------------------------------------------------
 parameter real SCALE_MHz = 1e6;

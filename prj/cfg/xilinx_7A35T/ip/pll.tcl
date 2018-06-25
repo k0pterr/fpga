@@ -19,8 +19,8 @@ proc ipUserCfg { ipCoreName ipCoreOutDir cfgDir } {
     
     set ipParams {
         CONFIG.PRIM_IN_FREQ                100
-        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ  50  
-        CONFIG.USE_LOCKED                  false
+        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ  200  
+        CONFIG.USE_LOCKED                  true
         CONFIG.USE_RESET                   false
         CONFIG.MMCM_COMPENSATION           ZHOLD
     }
