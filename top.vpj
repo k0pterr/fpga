@@ -118,7 +118,13 @@
                 Name="xilinx"
                 AutoCustom="1"
                 GUID="{59EEA8E9-A8AF-4AE3-BD3D-83D800943353}">
-                <F N="ip/xilinx/pll.tcl"/>
+                <Folder
+                    Name="pll"
+                    AutoCustom="1"
+                    GUID="{28FB350E-6506-4352-9D54-BE53F6476AF8}">
+                    <F N="ip/xilinx/pll/pll.tcl"/>
+                    <F N="ip/xilinx/pll/compile_simlib.do"/>
+                </Folder>
                 <F N="ip/xilinx/ram_sc_sp.tcl"/>
                 <F N="ip/xilinx/fifo_sc.tcl"/>
             </Folder>

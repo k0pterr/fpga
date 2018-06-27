@@ -16,10 +16,11 @@ add wave -noupdate -label dout -radix DOUT /slon5_tb/dout
 add wave -noupdate -color Red -label dout -radix hexadecimal -radixshowbase 0 /slon5_tb/dout
 add wave -noupdate /slon5_tb/slon5/clk
 add wave -noupdate /slon5_tb/slon5/rst
+add wave -noupdate /slon5_tb/slon5/pll_locked
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1038000 ps} 0} {{Cursor 2} {90554 ps} 0}
+WaveRestoreCursors {{Cursor 1} {1038000 ps} 0} {{Cursor 2} {193238 ps} 0}
 quietly wave cursor active 2
-configure wave -namecolwidth 150
+configure wave -namecolwidth 270
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -33,4 +34,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {275648 ps}
+WaveRestoreZoom {0 ps} {1470720 ps}

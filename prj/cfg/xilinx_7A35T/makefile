@@ -9,18 +9,17 @@
 # REF_DIR    - top level dir (attention please!)
 #-------------------------------------------------------------------------------
 
-DEVICE        := xc7a35ticsg324-1L
-TOP_NAME      := slon5_test
-TBENCH_NAME   := slon5_tb
+DEVICE         := xc7a35ticsg324-1L
+TOP_NAME       := slon5_test
+TBENCH_NAME    := slon5_tb
 
-REF_DIR       := ../../..
-LIB_DIR       := $(REF_DIR)/lib
-CFG_DIR       := $(CURDIR)
-SRC_DIR       := ../../src
-INC_DIR       := $(LIB_DIR)
-BUILD_DIR     := ../../../build
+CFG_DIR        := $(CURDIR)
+REF_DIR        := ../../..
+LIB_DIR        := $(REF_DIR)/lib
+SRC_DIR        := ../../src
+CFG_IP_DIR     := $(CFG_DIR)/ip
 
-SIM_WLIB_NAME := wlib
+SIM_WLIB_NAME  := wlib
 
 #-------------------------------------------------------------------------------
 #
@@ -48,8 +47,11 @@ SRC := $(SRC_DIR)/slon5_test.sv    \
 SDC := xilinx_7A35T.sdc \
        xilinx_7A35T.xdc
 
-#CFG_IP := ram_16x8 fifo_1024x8 fifo_512x8 fifo_256x8 pll
-CFG_IP := ip/pll
+#-----------------------------------------------------------
+#
+#    IP cores
+#
+CFG_IP := pll mmcm
 
 #-----------------------------------------------------------
 #
@@ -68,12 +70,9 @@ TRG_DEVICE := "xc7a35t_0"
 #
 SRC_SIM := $(SRC)\
            $(SRC_DIR)/sim/func/top_tb.sv\
-           $(SRC_DIR)/sim/func/slon5_tb.sv\
-	       /opt/slon/xilinx/mike/xilinx-vivado-bullet/build/syn/xilinx_7A35T/.ip/pll/pll/pll.v\
-	       /opt/slon/xilinx/mike/xilinx-vivado-bullet/build/syn/xilinx_7A35T/.ip/pll/pll/pll_clk_wiz.v\
-	    
+           $(SRC_DIR)/sim/func/slon5_tb.sv
 
-SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(INC_DIR)
+SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(LIB_DIR)
 
 #-----------------------------------------------------------
 #
