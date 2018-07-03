@@ -118,9 +118,34 @@
                 Name="xilinx"
                 AutoCustom="1"
                 GUID="{59EEA8E9-A8AF-4AE3-BD3D-83D800943353}">
-                <F N="ip/xilinx/pll.tcl"/>
-                <F N="ip/xilinx/ram_sc_sp.tcl"/>
-                <F N="ip/xilinx/fifo_sc.tcl"/>
+                <Folder
+                    Name="pll"
+                    AutoCustom="1"
+                    GUID="{28FB350E-6506-4352-9D54-BE53F6476AF8}">
+                    <F N="ip/xilinx/pll/pll.tcl"/>
+                    <F N="ip/xilinx/pll/compile_simlib.do"/>
+                </Folder>
+                <Folder
+                    Name="fifo_sc"
+                    AutoCustom="1"
+                    GUID="{11BF17EE-2EDE-4025-974F-EFEEED07DC41}">
+                    <F N="ip/xilinx/fifo_sc/compile_simlib.do"/>
+                    <F N="ip/xilinx/fifo_sc/fifo_sc.tcl"/>
+                </Folder>
+                <Folder
+                    Name="mmcm"
+                    AutoCustom="1"
+                    GUID="{FCA52984-44B3-486E-87BA-5F28CD3C07F6}">
+                    <F N="ip/xilinx/mmcm/compile_simlib.do"/>
+                    <F N="ip/xilinx/mmcm/mmcm.tcl"/>
+                </Folder>
+                <Folder
+                    Name="ram_sc_sp"
+                    AutoCustom="1"
+                    GUID="{5A84A83A-FA1D-4F89-99E2-4673E4F96649}">
+                    <F N="ip/xilinx/ram_sc_sp/compile_simlib.do"/>
+                    <F N="ip/xilinx/ram_sc_sp/ram_sc_sp.tcl"/>
+                </Folder>
             </Folder>
         </Folder>
         <Folder
@@ -174,27 +199,39 @@
                     Name="xilinx_7A35T"
                     AutoCustom="1"
                     GUID="{9E40A52D-A336-40DE-874E-786D968BCC4A}">
-                    <F N="prj/cfg/xilinx_7A35T/slon5_test-xilinx_7A35T.sdc"/>
+                    <Folder
+                        Name="ip"
+                        AutoCustom="1"
+                        GUID="{E8913D1E-5B1B-41AF-80E6-02BF32D98C5C}">
+                        <F N="prj/cfg/xilinx_7A35T/ip/pll.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/fifo_1024x16.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/ram_16x8.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/ram_16x8.coe"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/fifo_512x32.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/pll200.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/mmcm.tcl"/>
+                    </Folder>
+                    <F N="prj/cfg/xilinx_7A35T/cfg_params.tcl"/>
+                    <F N="prj/cfg/xilinx_7A35T/cfg_params_generated.svh"/>
+                    <F N="prj/cfg/xilinx_7A35T/epilogue.tcl"/>
                     <F N="prj/cfg/xilinx_7A35T/makefile"/>
-                    <F N="prj/cfg/xilinx_7A35T/slon5_test-xilinx_7A35T.xdc"/>
                     <F N="prj/cfg/xilinx_7A35T/prologue.tcl"/>
                     <F N="prj/cfg/xilinx_7A35T/settings.tcl"/>
-                    <F N="prj/cfg/xilinx_7A35T/cfg_params.tcl"/>
-                    <F N="prj/cfg/xilinx_7A35T/epilogue.tcl"/>
-                    <F N="prj/cfg/xilinx_7A35T/cfg_params_generated.svh"/>
+                    <F N="prj/cfg/xilinx_7A35T/xilinx_7A35T.sdc"/>
+                    <F N="prj/cfg/xilinx_7A35T/xilinx_7A35T.xdc"/>
                 </Folder>
                 <Folder
                     Name="xilinx_7A50T"
                     AutoCustom="1"
                     GUID="{FCF2DE9A-53D0-497A-9613-2220DB20859D}">
+                    <F N="prj/cfg/xilinx_7A50T/cfg_params.tcl"/>
+                    <F N="prj/cfg/xilinx_7A50T/cfg_params_generated.svh"/>
+                    <F N="prj/cfg/xilinx_7A50T/epilogue.tcl"/>
                     <F N="prj/cfg/xilinx_7A50T/makefile"/>
                     <F N="prj/cfg/xilinx_7A50T/prologue.tcl"/>
-                    <F N="prj/cfg/xilinx_7A50T/slon5_test-xilinx_7A50T.sdc"/>
                     <F N="prj/cfg/xilinx_7A50T/settings.tcl"/>
-                    <F N="prj/cfg/xilinx_7A50T/slon5_test-xilinx_7A50T.xdc"/>
-                    <F N="prj/cfg/xilinx_7A50T/cfg_params.tcl"/>
-                    <F N="prj/cfg/xilinx_7A50T/epilogue.tcl"/>
-                    <F N="prj/cfg/xilinx_7A50T/cfg_params_generated.svh"/>
+                    <F N="prj/cfg/xilinx_7A50T/xilinx_7A50T.sdc"/>
+                    <F N="prj/cfg/xilinx_7A50T/xilinx_7A50T.xdc"/>
                 </Folder>
             </Folder>
         </Folder>
