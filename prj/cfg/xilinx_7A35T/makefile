@@ -38,7 +38,7 @@ SRC := $(SRC_DIR)/slon5_test.sv    \
        $(SRC_DIR)/slon/slon12.sv   \
        $(SRC_DIR)/slon/slonick/slon21.v\
        $(SRC_DIR)/config.v         \
-	$(LIB_DIR)/pf.sv
+       $(LIB_DIR)/pf.sv
 
 
 #-----------------------------------------------------------
