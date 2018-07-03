@@ -37,7 +37,8 @@ SRC := $(SRC_DIR)/slon5_test.sv    \
        $(SRC_DIR)/slon/slon11.v    \
        $(SRC_DIR)/slon/slon12.sv   \
        $(SRC_DIR)/slon/slonick/slon21.v\
-       $(LIB_DIR)/pf.sv
+       $(SRC_DIR)/config.v         \
+	$(LIB_DIR)/pf.sv
 
 
 #-----------------------------------------------------------
@@ -51,7 +52,7 @@ SDC := xilinx_7A35T.sdc \
 #
 #    IP cores
 #
-CFG_IP := pll mmcm
+CFG_IP := pll pll200 fifo_1024x16 fifo_512x32 ram_16x8
 
 #-----------------------------------------------------------
 #
@@ -79,7 +80,7 @@ SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(LIB_DIR)
 #    Options
 #
 VLOG_FLAGS := -O5
-VOPT_FLAGS := -O5 -L unisims_ver
+VOPT_FLAGS := -O5 -L unifast_ver -L unisims_ver 
 
 #-------------------------------------------------------------------------------
 

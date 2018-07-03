@@ -125,8 +125,27 @@
                     <F N="ip/xilinx/pll/pll.tcl"/>
                     <F N="ip/xilinx/pll/compile_simlib.do"/>
                 </Folder>
-                <F N="ip/xilinx/ram_sc_sp.tcl"/>
-                <F N="ip/xilinx/fifo_sc.tcl"/>
+                <Folder
+                    Name="fifo_sc"
+                    AutoCustom="1"
+                    GUID="{11BF17EE-2EDE-4025-974F-EFEEED07DC41}">
+                    <F N="ip/xilinx/fifo_sc/compile_simlib.do"/>
+                    <F N="ip/xilinx/fifo_sc/fifo_sc.tcl"/>
+                </Folder>
+                <Folder
+                    Name="mmcm"
+                    AutoCustom="1"
+                    GUID="{FCA52984-44B3-486E-87BA-5F28CD3C07F6}">
+                    <F N="ip/xilinx/mmcm/compile_simlib.do"/>
+                    <F N="ip/xilinx/mmcm/mmcm.tcl"/>
+                </Folder>
+                <Folder
+                    Name="ram_sc_sp"
+                    AutoCustom="1"
+                    GUID="{5A84A83A-FA1D-4F89-99E2-4673E4F96649}">
+                    <F N="ip/xilinx/ram_sc_sp/compile_simlib.do"/>
+                    <F N="ip/xilinx/ram_sc_sp/ram_sc_sp.tcl"/>
+                </Folder>
             </Folder>
         </Folder>
         <Folder
@@ -185,6 +204,12 @@
                         AutoCustom="1"
                         GUID="{E8913D1E-5B1B-41AF-80E6-02BF32D98C5C}">
                         <F N="prj/cfg/xilinx_7A35T/ip/pll.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/fifo_1024x16.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/ram_16x8.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/ram_16x8.coe"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/fifo_512x32.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/pll200.tcl"/>
+                        <F N="prj/cfg/xilinx_7A35T/ip/mmcm.tcl"/>
                     </Folder>
                     <F N="prj/cfg/xilinx_7A35T/cfg_params.tcl"/>
                     <F N="prj/cfg/xilinx_7A35T/cfg_params_generated.svh"/>

@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------------
 
 set ip_type pll
-set ip_name pll
+set ip_name pll200
 
 #-------------------------------------------------------------------------------
 if {[info exists env(XILINX)]} {
@@ -24,7 +24,7 @@ if {[info exists env(XILINX)]} {
     
     set ipParams {
         CONFIG.PRIM_IN_FREQ                100
-        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ  25  
+        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ  200  
         CONFIG.USE_LOCKED                  true
         CONFIG.USE_RESET                   false
         CONFIG.MMCM_COMPENSATION           ZHOLD
@@ -39,5 +39,5 @@ if {[info exists env(MODEL_TECH)]} {
     source ${IP_LIB_DIR}/${ip_type}/compile_simlib.do
     
 }
-#-------------------------------------------------------------------------------
+
 
