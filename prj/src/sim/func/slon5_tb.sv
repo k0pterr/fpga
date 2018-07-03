@@ -7,7 +7,8 @@
 
 `include "common.pkg"
 `include "slon5.svh"    
-`include "slon5_debug.svh"    
+`include "slon5_debug.svh"
+`include "cfg_params_generated.svh"    
 
            
 //******************************************************************************
@@ -22,7 +23,6 @@ module slon5_tb import slon5_pkg::*,
 //==============================================================================
                                
 //------------------------------------------------------------------------------
-`define CLK_HALF_PERIOD     5ns
 `define WATCH_DOG_TIME   1_000_000ns
 
 //------------------------------------------------------------------------------
@@ -30,7 +30,8 @@ parameter real SCALE_MHz = 1e6;
 parameter real SCALE_uS  = 1e-6;
 parameter real SCALE_nS  = 1e-9;
 
-parameter int SYSTEM_CLOCK  = ((1.0/(`CLK_HALF_PERIOD*2.0*SCALE_nS))/SCALE_MHz);
+//parameter int SYSTEM_CLOCK  = ((1.0/(`CLK_HALF_PERIOD*2.0*SCALE_nS))/SCALE_MHz);
+parameter int SYSTEM_CLOCK  = `CLK_FREQ/SCALE_MHz;
 
 //==============================================================================
 //    Types
