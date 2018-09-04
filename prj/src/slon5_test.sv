@@ -11,7 +11,12 @@
 //******************************************************************************
 module slon5_test import slon5_pkg::*;
 (
+`ifdef DIFF_REFCLK
+    input  logic  ref_clk_p,
+    input  logic  ref_clk_n,
+`else
     input  logic  ref_clk,
+`endif
                                  
     input  Dnum_t sw,
 
@@ -30,6 +35,10 @@ module slon5_test import slon5_pkg::*;
 //==============================================================================
 //    Objects
 //==============================================================================
+
+`ifdef DIFF_REFCLK
+logic ref_clk;
+`endif
 
 logic clk;
 logic rst;
@@ -54,8 +63,17 @@ rst_m rst_inst
 );
 
 //------------------------------------------------------------------------------
-//    pll
+//    Clock
 //------------------------------------------------------------------------------
+`ifdef DIFF_REFCLK
+IBUFDS diff_clk_200 
+(
+    .I  ( ref_clk_p ),
+    .IB ( ref_clk_n ),
+    .O  ( ref_clk   )
+);
+`endif
+
 pll pll_inst
 (
     .clk_in1  ( ref_clk    ),
