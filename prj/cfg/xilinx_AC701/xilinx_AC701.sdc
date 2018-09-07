@@ -11,3 +11,4 @@ create_generated_clock -name ref_clk -source [get_pins diff_clk_200/O] -multiply
 
 #create_generated_clock -name clk -source [get_ports ref_clk]
 #get_clocks -of_objects [get_ports ref_clk]
+

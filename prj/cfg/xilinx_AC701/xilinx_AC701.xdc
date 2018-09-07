@@ -58,3 +58,8 @@ set_property PACKAGE_PIN P8   [get_ports {sw[1]}]
 set_property PACKAGE_PIN R8   [get_ports {sw[0]}]
 
 set_property IOSTANDARD SSTL15 [get_ports {sw}]
+
+set_property BITSTREAM.CONFIG.EXTMASTERCCLK_EN DIV-1 [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES [current_design]
+set_property CONFIG_MODE SPIx4 [current_design]
