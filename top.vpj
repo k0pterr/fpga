@@ -135,12 +135,12 @@
             </Target>
             <Target
                 Name="Rebuild"
-                MenuCaption="&amp;Rebuild"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
                 Verbose="1"
-                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                RunFromDir="%rw/prj/cfg/xilinx_AC701"
+                MenuCaption="&amp;Clean Build Projucts">
                 <Exec CmdLine="make clean all"/>
             </Target>
             <Target
@@ -360,15 +360,16 @@
                 <F N="script/helpers/qs_env.tcl"/>
             </Folder>
             <F N="script/altera.mk"/>
-            <F N="script/xilinx.mk"/>
-            <F N="script/xilinx_prj_gen.tcl"/>
-            <F N="script/xilinx_prj_build.tcl"/>
+            <F N="script/altera_prj_build.tcl"/>
             <F N="script/altera_prj_gen.tcl"/>
-            <F N="script/xilinx_dev_pgm.tcl"/>
             <F N="script/cfg_header_gen.tcl"/>
             <F N="script/questa_sim.tcl"/>
+            <F N="script/xilinx.mk"/>
+            <F N="script/xilinx_cfgmem_pgm.tcl"/>
+            <F N="script/xilinx_dev_pgm.tcl"/>
             <F N="script/xilinx_ip_bld.tcl"/>
-            <F N="script/altera_prj_build.tcl"/>
+            <F N="script/xilinx_prj_build.tcl"/>
+            <F N="script/xilinx_prj_gen.tcl"/>
         </Folder>
     </Files>
 </Project>

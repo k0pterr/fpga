@@ -58,8 +58,10 @@ CFG_IP := pll pll200 fifo_1024x16 fifo_512x32 ram_16x8
 #
 #    Target hardware
 #
-TRG_BOARD  := "Digilent/210203A7C564A"
-TRG_DEVICE := "xc7a200t_0"
+TRG_BOARD       := "Digilent/210203A7C564A"
+TRG_DEVICE      := "xc7a200t_0"
+TRG_CFGMEM      := "mt25ql256-spi-x1_x2_x4"
+TRG_CFGMEM_SIZE := 32
 
 #-------------------------------------------------------------------------------
 #
