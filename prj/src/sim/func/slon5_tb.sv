@@ -112,8 +112,12 @@ end
 
 slon5_test slon5
 (
+`ifdef DIFF_REFCLK
+    .ref_clk_p ( clk    ),
+    .ref_clk_n ( ~clk   ),
+`else
     .ref_clk ( clk     ),
-    
+`endif    
     .sw      ( sw      ),
              
     .dout    ( dout    ),

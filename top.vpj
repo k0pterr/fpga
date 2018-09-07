@@ -109,6 +109,59 @@
             </Target>
         </Menu>
     </Config>
+    <Config
+        Name="xilinx_AC701"
+        OutputFile=""
+        CompilerConfigName="Latest Version">
+        <Menu>
+            <Target
+                Name="Compile"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                RunFromDir="%rw/prj/cfg/xilinx_AC701"
+                MenuCaption="Compile Simulator Project">
+                <Exec CmdLine="make qs_vlog"/>
+            </Target>
+            <Target
+                Name="Build"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                MenuCaption="&amp;Build Vivado Project"
+                Verbose="1"
+                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                <Exec CmdLine="make"/>
+            </Target>
+            <Target
+                Name="Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveAll"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                RunFromDir="%rw/prj/cfg/xilinx_AC701"
+                MenuCaption="&amp;Clean Build Projucts">
+                <Exec CmdLine="make clean all"/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                SaveOption="SaveNone"
+                RunInXterm="1"
+                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                <Exec CmdLine="make qs_gui"/>
+            </Target>
+            <Target
+                Name="Execute"
+                MenuCaption="Program Device"
+                SaveOption="SaveAll"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1"
+                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                <Exec CmdLine="make dev_pgm"/>
+            </Target>
+        </Menu>
+    </Config>
     <Files>
         <Folder
             Name="ip"
@@ -211,6 +264,12 @@
                         <F N="prj/cfg/xilinx_7A35T/ip/pll200.tcl"/>
                         <F N="prj/cfg/xilinx_7A35T/ip/mmcm.tcl"/>
                     </Folder>
+                    <Folder
+                        Name="sim"
+                        AutoCustom="1"
+                        GUID="{BCD2619A-E9F6-4681-8E64-D7E8282D1C43}">
+                        <F N="prj/cfg/xilinx_7A35T/sim/top_wave.do"/>
+                    </Folder>
                     <F N="prj/cfg/xilinx_7A35T/cfg_params.tcl"/>
                     <F N="prj/cfg/xilinx_7A35T/cfg_params_generated.svh"/>
                     <F N="prj/cfg/xilinx_7A35T/epilogue.tcl"/>
@@ -224,6 +283,23 @@
                     Name="xilinx_7A50T"
                     AutoCustom="1"
                     GUID="{FCF2DE9A-53D0-497A-9613-2220DB20859D}">
+                    <Folder
+                        Name="ip"
+                        AutoCustom="1"
+                        GUID="{B1126633-BF3F-48D6-ACA1-E2DABCD103E8}">
+                        <F N="prj/cfg/xilinx_7A50T/ip/pll.tcl"/>
+                        <F N="prj/cfg/xilinx_7A50T/ip/fifo_1024x16.tcl"/>
+                        <F N="prj/cfg/xilinx_7A50T/ip/ram_16x8.tcl"/>
+                        <F N="prj/cfg/xilinx_7A50T/ip/fifo_512x32.tcl"/>
+                        <F N="prj/cfg/xilinx_7A50T/ip/pll200.tcl"/>
+                        <F N="prj/cfg/xilinx_7A50T/ip/mmcm.tcl"/>
+                    </Folder>
+                    <Folder
+                        Name="sim"
+                        AutoCustom="1"
+                        GUID="{79553A01-BE2A-440D-8885-F7DE77D93909}">
+                        <F N="prj/cfg/xilinx_7A50T/sim/top_wave.do"/>
+                    </Folder>
                     <F N="prj/cfg/xilinx_7A50T/cfg_params.tcl"/>
                     <F N="prj/cfg/xilinx_7A50T/cfg_params_generated.svh"/>
                     <F N="prj/cfg/xilinx_7A50T/epilogue.tcl"/>
@@ -232,6 +308,36 @@
                     <F N="prj/cfg/xilinx_7A50T/settings.tcl"/>
                     <F N="prj/cfg/xilinx_7A50T/xilinx_7A50T.sdc"/>
                     <F N="prj/cfg/xilinx_7A50T/xilinx_7A50T.xdc"/>
+                </Folder>
+                <Folder
+                    Name="xilinx_AC701"
+                    AutoCustom="1"
+                    GUID="{C7C4A52A-9233-47B2-834D-4DD070B12643}">
+                    <Folder
+                        Name="ip"
+                        AutoCustom="1"
+                        GUID="{DF789691-9D67-45E0-8128-7D20A99C6135}">
+                        <F N="prj/cfg/xilinx_AC701/ip/pll.tcl"/>
+                        <F N="prj/cfg/xilinx_AC701/ip/fifo_1024x16.tcl"/>
+                        <F N="prj/cfg/xilinx_AC701/ip/ram_16x8.tcl"/>
+                        <F N="prj/cfg/xilinx_AC701/ip/fifo_512x32.tcl"/>
+                        <F N="prj/cfg/xilinx_AC701/ip/pll200.tcl"/>
+                        <F N="prj/cfg/xilinx_AC701/ip/mmcm.tcl"/>
+                    </Folder>
+                    <Folder
+                        Name="sim"
+                        AutoCustom="1"
+                        GUID="{BBC10157-1584-4F91-9749-5C478AF0A513}">
+                        <F N="prj/cfg/xilinx_AC701/sim/top_wave.do"/>
+                    </Folder>
+                    <F N="prj/cfg/xilinx_AC701/makefile"/>
+                    <F N="prj/cfg/xilinx_AC701/xilinx_AC701.xdc"/>
+                    <F N="prj/cfg/xilinx_AC701/prologue.tcl"/>
+                    <F N="prj/cfg/xilinx_AC701/settings.tcl"/>
+                    <F N="prj/cfg/xilinx_AC701/cfg_params.tcl"/>
+                    <F N="prj/cfg/xilinx_AC701/epilogue.tcl"/>
+                    <F N="prj/cfg/xilinx_AC701/cfg_params_generated.svh"/>
+                    <F N="prj/cfg/xilinx_AC701/xilinx_AC701.sdc"/>
                 </Folder>
             </Folder>
         </Folder>
@@ -254,15 +360,16 @@
                 <F N="script/helpers/qs_env.tcl"/>
             </Folder>
             <F N="script/altera.mk"/>
-            <F N="script/xilinx.mk"/>
-            <F N="script/xilinx_prj_gen.tcl"/>
-            <F N="script/xilinx_prj_build.tcl"/>
+            <F N="script/altera_prj_build.tcl"/>
             <F N="script/altera_prj_gen.tcl"/>
-            <F N="script/xilinx_dev_pgm.tcl"/>
             <F N="script/cfg_header_gen.tcl"/>
             <F N="script/questa_sim.tcl"/>
+            <F N="script/xilinx.mk"/>
+            <F N="script/xilinx_cfgmem_pgm.tcl"/>
+            <F N="script/xilinx_dev_pgm.tcl"/>
             <F N="script/xilinx_ip_bld.tcl"/>
-            <F N="script/altera_prj_build.tcl"/>
+            <F N="script/xilinx_prj_build.tcl"/>
+            <F N="script/xilinx_prj_gen.tcl"/>
         </Folder>
     </Files>
 </Project>
