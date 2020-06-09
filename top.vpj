@@ -2964,7 +2964,6 @@
                     <F N="cfg/xilinx_7A50T/sim/top_wave.do"/>
                 </Folder>
                 <F N="cfg/xilinx_7A50T/makefile"/>
-                <F N="cfg/xilinx_7A50T/xilinx_7A50T.sdc"/>
                 <F N="cfg/xilinx_7A50T/prologue.tcl"/>
                 <F N="cfg/xilinx_7A50T/settings.tcl"/>
                 <F N="cfg/xilinx_7A50T/cfg_params.tcl"/>
