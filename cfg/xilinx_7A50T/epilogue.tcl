@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
-#	Project:         Any
-#	Configuration:   xilinx_7A50T
+#   Project:         Any
+#   Configuration:   xilinx_AC701
 #
-#	Description:   Epilogue config script
+#   Description:   Epilogue config script
 #--------------------------------------------------------------------------------
 
 puts ""

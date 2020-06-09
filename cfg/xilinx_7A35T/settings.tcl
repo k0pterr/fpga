@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
-#	Project:        Any
-#	Configuration:  xilinx_7A35T
+#   Project:        Any
+#   Configuration:  xilinx_701
 #
-#	Description:   Project settings
+#   Description:   Project settings
 #--------------------------------------------------------------------------------
 
 puts ""
