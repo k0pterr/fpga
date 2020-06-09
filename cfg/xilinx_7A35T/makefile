@@ -10,8 +10,8 @@
 #-------------------------------------------------------------------------------
 
 DEVICE         := xc7a35ticsg324-1L
-TOP_NAME       := slon5_test
-TBENCH_NAME    := slon5_tb
+TOP_NAME       := top
+TBENCH_NAME    := top_tb
 
 CFG_DIR        := $(CURDIR)
 REF_DIR        := ../..
@@ -29,30 +29,21 @@ SIM_WLIB_NAME  := wlib
 #
 #    Sources
 #
-INC := $(SRC_DIR)/slon5.svh
+SRC := $(SRC_DIR)/top.sv
 
-SRC := $(SRC_DIR)/slon5_test.sv    \
-       $(SRC_DIR)/slon5.sv         \
-       $(SRC_DIR)/slon01.v         \
-       $(SRC_DIR)/slon/slon11.v    \
-       $(SRC_DIR)/slon/slon12.sv   \
-       $(SRC_DIR)/slon/slonick/slon21.v\
-       $(SRC_DIR)/config.v         \
-       $(LIB_DIR)/pf.sv
 
 
 #-----------------------------------------------------------
 #
 #    Constraints
 #
-SDC := xilinx_7A35T.sdc \
-       xilinx_7A35T.xdc
+SDC := xilinx_7A35T.xdc
 
 #-----------------------------------------------------------
 #
 #    IP cores
 #
-CFG_IP := pll pll200 fifo_1024x16 fifo_512x32 ram_16x8
+CFG_IP := pll
 
 #-----------------------------------------------------------
 #
@@ -70,8 +61,7 @@ TRG_DEVICE := "xc7a35t_0"
 #    Sources
 #
 SRC_SIM := $(SRC)\
-           $(SRC_DIR)/sim/func/top_tb.sv\
-           $(SRC_DIR)/sim/func/slon5_tb.sv
+           $(SRC_DIR)/sim/func/top_tb.sv
 
 SIM_INC_DIRS := $(CFG_DIR) $(SRC_DIR) $(LIB_DIR)
 

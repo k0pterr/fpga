@@ -11,6 +11,7 @@ set ip_name pll
 #-------------------------------------------------------------------------------
 if {[info exists env(XILINX)]} {
 
+    source cfg_params.tcl
     source ${IP_LIB_DIR}/${ip_type}/${ip_type}.tcl
     
     #---------------------------------------------------------------------------
@@ -22,13 +23,20 @@ if {[info exists env(XILINX)]} {
     proc ipUserCfg { ipCoreName ipCoreOutDir cfgDir } {
     #puts "\[ipUserCfg\] $ipCoreName $ipCoreOutDir"
     
+    global config_params
+
+    set IN_CLK [expr ([getparam CLK_FREQ]/1e6)]
+        
     set ipParams {
-        CONFIG.PRIM_IN_FREQ                100
-        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ  25  
+        CONFIG.PRIM_IN_FREQ                ${IN_CLK}
+        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ  125  
         CONFIG.USE_LOCKED                  true
         CONFIG.USE_RESET                   false
-        CONFIG.MMCM_COMPENSATION           ZHOLD
+        #CONFIG.PRIM_SOURCE                 Differential_clock_capable_pin
+        CONFIG.USE_SAFE_CLOCK_STARTUP      true
+        #CONFIG.MMCM_COMPENSATION           ZHOLD
     }
+    regsub -all {#.*?\n} $ipParams \n ipParams
     set_property -dict [subst $ipParams] [get_ips $ipCoreName]
     #report_property [get_ips $ipCoreName]
     }
