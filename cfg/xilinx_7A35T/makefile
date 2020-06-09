@@ -14,9 +14,9 @@ TOP_NAME       := slon5_test
 TBENCH_NAME    := slon5_tb
 
 CFG_DIR        := $(CURDIR)
-REF_DIR        := ../../..
+REF_DIR        := ../..
 LIB_DIR        := $(REF_DIR)/lib
-SRC_DIR        := ../../src
+SRC_DIR        := $(REF_DIR)/src
 CFG_IP_DIR     := $(CFG_DIR)/ip
 
 SIM_WLIB_NAME  := wlib
@@ -84,7 +84,7 @@ VOPT_FLAGS := -O5 -L unifast_ver -L unisims_ver
 
 #-------------------------------------------------------------------------------
 
-include $(REF_DIR)/script/xilinx.mk
+include $(REF_DIR)/.script/xilinx.mk
 
 #-------------------------------------------------------------------------------
 

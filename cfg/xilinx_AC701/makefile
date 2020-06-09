@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
 #	Project:        Any
-#	Configuration:  xilinx_7A50T
+#	Configuration:  xilinx_AC701
 #
 #	Description:    Project settings file
 #-------------------------------------------------------------------------------
@@ -9,17 +9,17 @@
 # REF_DIR    - top level dir (attention please!)
 #-------------------------------------------------------------------------------
 
-DEVICE        := xc7a50tftg256-1
-TOP_NAME      := slon5_test
-TBENCH_NAME   := slon5_tb
+DEVICE         := xc7a200tfbg676-2
+TOP_NAME       := slon5_test
+TBENCH_NAME    := slon5_tb
 
 CFG_DIR        := $(CURDIR)
-REF_DIR        := ../../..
+REF_DIR        := ../..
 LIB_DIR        := $(REF_DIR)/lib
-SRC_DIR        := ../../src
+SRC_DIR        := $(REF_DIR)/src
 CFG_IP_DIR     := $(CFG_DIR)/ip
 
-SIM_WLIB_NAME := wlib
+SIM_WLIB_NAME  := wlib
 
 #-------------------------------------------------------------------------------
 #
@@ -45,8 +45,8 @@ SRC := $(SRC_DIR)/slon5_test.sv    \
 #
 #    Constraints
 #
-SDC := xilinx_7A50T.sdc \
-       xilinx_7A50T.xdc
+SDC := xilinx_AC701.sdc \
+       xilinx_AC701.xdc
 
 #-----------------------------------------------------------
 #
@@ -58,8 +58,10 @@ CFG_IP := pll pll200 fifo_1024x16 fifo_512x32 ram_16x8
 #
 #    Target hardware
 #
-TRG_BOARD  := "Digilent/210251991273"
-TRG_DEVICE := "xc7a50t_0"
+TRG_BOARD       := "Digilent/210203A7C564A"
+TRG_DEVICE      := "xc7a200t_0"
+TRG_CFGMEM      := "mt25ql256-spi-x1_x2_x4"
+TRG_CFGMEM_SIZE := 32
 
 #-------------------------------------------------------------------------------
 #
@@ -84,7 +86,7 @@ VOPT_FLAGS := -O5 -L unifast_ver -L unisims_ver
 
 #-------------------------------------------------------------------------------
 
-include $(REF_DIR)/script/xilinx.mk
+include $(REF_DIR)/.script/xilinx.mk
 
 #-------------------------------------------------------------------------------
 
