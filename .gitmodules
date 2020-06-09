@@ -1,5 +1,5 @@
 [submodule "script"]
-	path = script
+	path = .script
 	url = https://gitlab.com/camlab/fpga-script.git
 [submodule "ip"]
 	path = ip
