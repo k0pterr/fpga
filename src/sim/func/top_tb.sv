@@ -7,27 +7,50 @@
 //
 //-------------------------------------------------------------------------------
 
+`include "cfg_params_generated.svh"
+
 `timescale 1ns/1ps
 
 module top_tb;
 
-logic test = 1;
-logic res;
+localparam CLK_HALF_PERIOD = `CLK_HALF_PERIOD;
+localparam WIDTH           = `WIDTH;
+    
+logic [WIDTH-1:0] out; 
 
-initial begin
-    for(int i = 0; i < 100; i++) begin
-        #10ns
-        test = ~test;
-    end
+`ifdef DIFF_REFCLK
+logic ref_clk_p;
+logic ref_clk_n;
+`else
+logic ref_clk;
+`endif
 
-    #100ns
-    $stop();
+
+    
+`ifdef DIFF_REFCLK
+always begin
+    #CLK_HALF_PERIOD
+    ref_clk_p = ~ref_clk_p;
+    ref_clk_n = ~ref_clk_n;
 end
+`else
+always begin
+    #CLK_HALF_PERIOD
+     ref_clk = ~ref_clk;
+end
+`endif
+
 
 top top_inst
 (
-    .in  ( test ),
-    .out ( res  )
+`ifdef DIFF_REFCLK
+    .ref_clk_p ( ref_clk_p ),
+    .ref_clk_n ( ref_clk_n ),
+`else                        
+    .ref_clk   ( ref_clk   ),
+`endif
+
+    .out       ( out       )
 );
 
 endmodule

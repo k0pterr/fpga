@@ -13,7 +13,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                RunFromDir="%rw/cfg/xilinx_7A50T"
                 MenuCaption="Compile Simulator Project">
                 <Exec CmdLine="make qs_vlog"/>
             </Target>
@@ -21,7 +21,7 @@
                 Name="Build"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
-                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                RunFromDir="%rw/cfg/xilinx_7A50T"
                 ClearProcessBuffer="1"
                 MenuCaption="&amp;Build Vivado Project"
                 Verbose="1">
@@ -32,7 +32,7 @@
                 MenuCaption="&amp;Rebuild"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
-                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                RunFromDir="%rw/cfg/xilinx_7A50T"
                 ClearProcessBuffer="1"
                 Verbose="1">
                 <Exec CmdLine="make clean all"/>
@@ -42,14 +42,14 @@
                 MenuCaption="&amp;Debug"
                 SaveOption="SaveNone"
                 RunInXterm="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A50T">
+                RunFromDir="%rw/cfg/xilinx_7A50T">
                 <Exec CmdLine="make qs_gui"/>
             </Target>
             <Target
                 Name="Execute"
                 MenuCaption="Program Device"
                 SaveOption="SaveAll"
-                RunFromDir="%rw/prj/cfg/xilinx_7A50T"
+                RunFromDir="%rw/cfg/xilinx_7A50T"
                 CaptureOutputWith="ProcessBuffer"
                 ClearProcessBuffer="1">
                 <Exec CmdLine="make dev_pgm"/>
@@ -66,7 +66,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A35T"
+                RunFromDir="%rw/cfg/xilinx_7A35T"
                 MenuCaption="Compile Simulator Project">
                 <Exec CmdLine="make qs_vlog"/>
             </Target>
@@ -77,7 +77,7 @@
                 ClearProcessBuffer="1"
                 MenuCaption="&amp;Build Vivado Project"
                 Verbose="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                RunFromDir="%rw/cfg/xilinx_7A35T">
                 <Exec CmdLine="make"/>
             </Target>
             <Target
@@ -87,7 +87,7 @@
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
                 Verbose="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                RunFromDir="%rw/cfg/xilinx_7A35T">
                 <Exec CmdLine="make clean all"/>
             </Target>
             <Target
@@ -95,7 +95,7 @@
                 MenuCaption="&amp;Debug"
                 SaveOption="SaveNone"
                 RunInXterm="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                RunFromDir="%rw/cfg/xilinx_7A35T">
                 <Exec CmdLine="make qs_gui"/>
             </Target>
             <Target
@@ -104,7 +104,7 @@
                 SaveOption="SaveAll"
                 CaptureOutputWith="ProcessBuffer"
                 ClearProcessBuffer="1"
-                RunFromDir="%rw/prj/cfg/xilinx_7A35T">
+                RunFromDir="%rw/cfg/xilinx_7A35T">
                 <Exec CmdLine="make dev_pgm"/>
             </Target>
         </Menu>
@@ -119,7 +119,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
-                RunFromDir="%rw/prj/cfg/xilinx_AC701"
+                RunFromDir="%rw/cfg/xilinx_AC701"
                 MenuCaption="Compile Simulator Project">
                 <Exec CmdLine="make qs_vlog"/>
             </Target>
@@ -130,7 +130,7 @@
                 ClearProcessBuffer="1"
                 MenuCaption="&amp;Build Vivado Project"
                 Verbose="1"
-                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                RunFromDir="%rw/cfg/xilinx_AC701">
                 <Exec CmdLine="make"/>
             </Target>
             <Target
@@ -139,7 +139,7 @@
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
                 Verbose="1"
-                RunFromDir="%rw/prj/cfg/xilinx_AC701"
+                RunFromDir="%rw/cfg/xilinx_AC701"
                 MenuCaption="&amp;Clean Build Projucts">
                 <Exec CmdLine="make clean all"/>
             </Target>
@@ -148,7 +148,7 @@
                 MenuCaption="&amp;Debug"
                 SaveOption="SaveNone"
                 RunInXterm="1"
-                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                RunFromDir="%rw/cfg/xilinx_AC701">
                 <Exec CmdLine="make qs_gui"/>
             </Target>
             <Target
@@ -157,7 +157,7 @@
                 SaveOption="SaveAll"
                 CaptureOutputWith="ProcessBuffer"
                 ClearProcessBuffer="1"
-                RunFromDir="%rw/prj/cfg/xilinx_AC701">
+                RunFromDir="%rw/cfg/xilinx_AC701">
                 <Exec CmdLine="make dev_pgm"/>
             </Target>
         </Menu>
@@ -2927,11 +2927,6 @@
                     AutoCustom="1"
                     GUID="{D0A231D1-A1F3-4CCF-A80E-42062A7AEC10}">
                     <F N="cfg/xilinx_AC701/ip/pll.tcl"/>
-                    <F N="cfg/xilinx_AC701/ip/fifo_1024x16.tcl"/>
-                    <F N="cfg/xilinx_AC701/ip/ram_16x8.tcl"/>
-                    <F N="cfg/xilinx_AC701/ip/fifo_512x32.tcl"/>
-                    <F N="cfg/xilinx_AC701/ip/pll200.tcl"/>
-                    <F N="cfg/xilinx_AC701/ip/mmcm.tcl"/>
                 </Folder>
                 <Folder
                     Name="sim"
