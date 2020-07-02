@@ -19,12 +19,11 @@ localparam WIDTH           = `WIDTH;
 logic [WIDTH-1:0] out; 
 
 `ifdef DIFF_REFCLK
-logic ref_clk_p;
-logic ref_clk_n;
+logic ref_clk_p = 0;
+logic ref_clk_n = 1;
 `else
-logic ref_clk;
+logic ref_clk = 0;
 `endif
-
 
     
 `ifdef DIFF_REFCLK
@@ -40,6 +39,11 @@ always begin
 end
 `endif
 
+
+initial begin
+    #10us
+    $stop(2);   
+end 
 
 top top_inst
 (
